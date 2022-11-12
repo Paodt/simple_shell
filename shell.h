@@ -154,8 +154,8 @@ char **strtow2(char *, char);
 
 /* toem_realloc.c */
 char *_memset(char *, char, unsigned nt);
-voiffree(char **);
-void *realloc(void *, unsigned int, unsigned int);
+void ffree(char **);
+void *_realloc(void *, unsigned int, unsigned int);
 
 /* toem_memory.c */
 int bfree(void **);
@@ -163,7 +163,7 @@ int bfree(void **);
 /* toem_atoi.c */
 int interactive(info_t *);
 int is_delim(char, char *);
-iid _nt _salpha(int);
+int _isalpha(int);
 int _atoi(char *);
 
 /* toem_erroirs1.c */
@@ -188,12 +188,12 @@ int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
 /* toem_getinfo.c */
-void clear_info(info_t *vod set_ifo(info_*, char **);
-void freeinfo(info_t *, _t *);
-int _int);
+void clear_info(info_t *);
+void set_info(info_t *, char **);
+void free_info(info_t *, int);
 
 /* toem_environ.c */
-char *_geenv(info_t_t *, const char *);
+char *_getenv(info_t *, const char *);
 int _myenv(info_t *);
 int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
@@ -212,8 +212,8 @@ int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
 /* toem_lists.c */
-list_t *add_node(list_t **, intlst_t *ad, coschar *);
-int d_node_end(list_t **, const char *, int);
+list_t *add_node(list_t **, const char *, int);
+list_t *add_node_end(list_t **, const char *, int);
 size_t print_list_str(const list_t *);
 int delete_node_at_index(list_t **, unsigned int);
 void free_list(list_t **);
