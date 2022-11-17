@@ -52,13 +52,13 @@ typedef struct liststr
 
 /**
  *struct passinfo - contains pseudo-arguements to pass into a function,
- *		allowing uniform prototype for function pointer struct
+ *allowing uniform prototype for function pointer struct
  *@arg: a string generated from getline containing arguements
  *@argv: an array of strings generated from arg
  *@path: a string path for the current command
  *@argc: the argument count
  *@line_count: the errr count
- *@err_nu: the error code for exiomt()s
+ *@err_num: the error code for exiomt()s
  *@linecount_flag: if on count this line of input
  *@fname: the program filename
  *@env: linked list local copy of environ
@@ -67,7 +67,7 @@ typedef struct liststr
  *@alias: the alias node
  *@env_changed: on if environ was changed
  *@status: the return status of th last exec' command
- *@cmd_bufaded: dress of pointer to cmd_buf, on if chaining
+ *@cmd_buf: dress of pointer to cmd_buf, on if chaining
  *@cmd_buf_type: CMD_type ||, &&, ;
  *@readfd: the fd from which to read line input
  *@histcount: the history line number count
@@ -107,7 +107,7 @@ typedef struct passinfo
 typedef struct builtin
 {
 	char *type;
-	int(*func)(info_t *);
+	int (*func)(info_t *);
 } builtin_table;
 
 
@@ -153,7 +153,7 @@ char **strtow(char *, char *);
 char **strtow2(char *, char);
 
 /* toem_realloc.c */
-char *_memset(char *, char, unsigned nt);
+char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
